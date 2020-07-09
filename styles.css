@@ -4,7 +4,7 @@
   --primaryColor: #d90429;
   --secondPrimary: #ef233c;
   --mainLight: #edf2f4;
-  --light2: #e7e3e3;
+  --light2: #e0d7d7;
   --mainDark: #2b2d42;
   --mainGrey: #8d99ae;
   --mainSpacing: 0.1rem;
@@ -95,6 +95,81 @@ body {
   color: var(--primaryColor);
 }
 /* --------------- End of Hero ---------------- */
+
+/* --------------- Products ---------------- */
+
+.products {
+  padding: 4rem 0;
+}
+.section-title h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.products-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+}
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+.bag-btn {
+  position: absolute;
+  top: 70%;
+  right: 0;
+  background: var(--primaryColor);
+  border: none;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  letter-spacing: var(--mainSpacing);
+  font-weight: bold;
+  transition: var(--mainTransition);
+  transform: translateX(101%);
+  cursor: pointer;
+}
+.bag-btn:hover {
+  color: var(--mainLight);
+}
+.fa-shopping-cart {
+  margin-right: 0.5rem;
+}
+.img-container:hover .bag-btn {
+  transform: translateX(0);
+}
+.product-img {
+  display: block;
+  width: 100%;
+  min-height: 12rem;
+  transition: var(--mainTransition);
+}
+.img-container:hover .product-img {
+  opacity: 0.5;
+}
+
+.product h3 {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+}
+
+.product h4 {
+  margin-top: 0.7rem;
+  letter-spacing: var(--mainSpacing);
+  color: var(--primaryColor);
+  text-align: center;
+}
+
+/* ---------------End of Products ---------------- */
 /* --------------- Cart ---------------- */
 .cart-overlay {
   position: fixed;
@@ -102,9 +177,8 @@ body {
   right: 0;
   width: 100%;
   height: 100%;
-  background: transparent;
   transition: var(--mainTransition);
-  background: var(--secondPrimary);
+  background: rgba(129, 127, 128, 0.5);
   z-index: 2;
   visibility: hidden;
 }
@@ -116,7 +190,7 @@ body {
   height: 100%;
   overflow: scroll;
   z-index: 3;
-  background: var(--light2);
+  background: rgb(231, 226, 221);
   padding: 1.5rem;
   transition: var(--mainTransition);
   transform: translateX(100%);
@@ -169,13 +243,16 @@ body {
   text-align: center;
 }
 .remove-item {
-  color: var(--mainGrey);
+  color: grey;
   cursor: pointer;
 }
 .fa-chevron-up,
 .fa-chevron-down {
   color: var(--primaryColor);
   cursor: pointer;
+}
+.days {
+  text-align: center;
 }
 /*---------- End of Cart Item -------------------- */
 
@@ -190,76 +267,3 @@ body {
 }
 
 /* --------------- End of Cart ---------------- */
-
-/* --------------- Products ---------------- */
-
-.products {
-  padding: 4rem 0;
-}
-.section-title h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 5rem;
-  text-transform: capitalize;
-  letter-spacing: var(--mainSpacing);
-}
-.products-center {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1300px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-column-gap: 1.5rem;
-  grid-row-gap: 2rem;
-}
-.img-container {
-  position: relative;
-  overflow: hidden;
-}
-.bag-btn {
-  position: absolute;
-  top: 70%;
-  right: 0;
-  background: var(--secondPrimary);
-  border: none;
-  text-transform: uppercase;
-  padding: 0.5rem 0.75rem;
-  letter-spacing: var(--mainSpacing);
-  font-weight: bold;
-  transition: var(--mainTransition);
-  transform: translateX(101%);
-  cursor: pointer;
-}
-.bag-btn:hover {
-  color: var(--mainLight);
-}
-.fa-shopping-cart {
-  margin-right: 0.5rem;
-}
-.img-container:hover .bag-btn {
-  transform: translateX(0);
-}
-.product-img {
-  display: block;
-  width: 100%;
-  min-height: 12rem;
-  transition: var(--mainTransition);
-}
-.img-container:hover .product-img {
-  opacity: 0.5;
-}
-
-.product h3 {
-  text-transform: capitalize;
-  font-size: 1.1rem;
-  margin-top: 1rem;
-  letter-spacing: var(--mainSpacing);
-  text-align: center;
-}
-
-.product h4 {
-  margin-top: 0.7rem;
-  letter-spacing: var(--mainSpacing);
-  color: var(--primaryColor);
-  text-align: center;
-}
