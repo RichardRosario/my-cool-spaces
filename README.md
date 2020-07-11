@@ -6,4 +6,6 @@
 
 ### Funtionality:
 
-#### display properties and space for rents, add space to cart, increase-decrease number of days, show items in cart, remove items in cart, add total amount.
+#### display properties and space for rents with DOM traversing, add space to cart, increase-decrease number of days, show items in cart, remove items in cart, add total amount.
+
+#### responsive layout using css grid
