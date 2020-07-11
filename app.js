@@ -147,6 +147,7 @@ class Storage {
   static saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
   }
+  // get cart value from local storage
   static getCart() {
     return localStorage.getItem("cart")
       ? JSON.parse(localStorage.getItem("cart"))
