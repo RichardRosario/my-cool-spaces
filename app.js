@@ -25,10 +25,11 @@ class Products {
         content_type: "coolSpaces",
       });
       console.log(contentful);
-
+      // local data
       // let result = await fetch("products.json");
       // let data = await result.json();
       let products = contentful.items;
+
       products = products.map((item) => {
         const { title, price } = item.fields;
         const { id } = item.sys;
@@ -74,12 +75,12 @@ class UI {
       let id = button.dataset.id;
       let inCart = cart.find((item) => item.id === id);
       if (inCart) {
-        button.innerHTML = `In Cart`;
+        button.innerHTML = `Already in Bag`;
         button.disabled = true;
       }
       button.addEventListener("click", (event) => {
         event.preventDefault();
-        event.target.innerText = "In Cart";
+        event.target.innerText = "Already in Bag";
         event.target.disabled = true;
         // get product from products
         let cartItem = { ...Storage.getProduct(id), amount: 1 };
@@ -197,7 +198,7 @@ class UI {
     Storage.saveCart(cart);
     let button = this.getSingleButton(id);
     button.disabled = false;
-    button.innerHTML = `<i class="fas fa-shopping-cart"></i>add to cart`;
+    button.innerHTML = `<i class="fas fa-shopping-cart"></i>add to bag`;
   }
   getSingleButton(id) {
     return buttonsDOM.find((button) => button.dataset.id === id);

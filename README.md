@@ -1,6 +1,6 @@
 # My Cool Spaces
 
-## This is a simple javascript project for a property agent client who deals with house furnitures and spaces for rent.
+## This is a simple javascript project for a property agent client who deals with house furnitures and spaces for rent. This is the base app.. it will be extended to offer more functionality in the future.
 
 ### This is purely made in vanilla javascript.
 
